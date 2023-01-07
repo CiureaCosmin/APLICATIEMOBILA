@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.MainPage"
+             NavigationPage.HasBackButton="False"
+             Title="                           HomeZ"
+             BackgroundColor="Turquoise">
+    <StackLayout>
+        <Label Text="Bine ai venit," HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
+        <Label Text="{Binding Username}" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
+        <Image Source="https://i.imgur.com/wTNiqQ4.jpg"/>
+        <Label/>
+        <Button Text="Book a room" Clicked="OnRezervatClicked"  HorizontalOptions="Center"
+                VerticalOptions="Fill">
+            <Button.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="iOS" Value="#3498db" />
+                    <On Platform="Android" Value="#2ecc71" />
+                </OnPlatform>
+            </Button.BackgroundColor>
+        </Button>
+    </StackLayout>
+</ContentPage>
+
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.SalonSinglePage"
+              NavigationPage.HasBackButton="False"
+             Title="{Binding Name}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back"              
+                 Order="Primary"
+                 Priority="0"
+                 Clicked="OnItemClicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Aceasta unitate de cazare are un rating de "/>
+            <Label Text="{Binding Rating}" />
+            <Image Source="{Binding ImageUrl}" Aspect="AspectFill" />
+            <Label/>
+            <Button Text="Fa o rezervare" Clicked="OnRezervat" HorizontalOptions="Center"/>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

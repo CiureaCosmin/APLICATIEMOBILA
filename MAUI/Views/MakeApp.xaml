@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Views.MakeApp"
+              NavigationPage.HasBackButton="False"
+             Title="MakeApp">
+    <StackLayout>
+        <Label Text="Data" />
+        <DatePicker x:Name="AlegeData" />
+        <ListView x:Name="listView" SelectionMode="Single" ItemSelected="ItemSelectat">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Name}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Rezerva" Clicked="OnAddRezerva" />
+    </StackLayout>
+</ContentPage>
